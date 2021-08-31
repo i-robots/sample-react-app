@@ -38,7 +38,7 @@ class Directory extends React.Component {
 
 function ShopItem({ item }) {
     return (
-      <Card style={{ margin: "10px" }}>
+      <Card style={{ margin: "10px" }} key={item.id}>
         <CardContent>{item.title}</CardContent>
         <img alt='IMG' src={item.imageUrl}/>
       </Card>

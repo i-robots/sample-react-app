@@ -30,6 +30,7 @@ class AddItem extends React.Component{
         if(this.state.title === '' | this.state.imageUrl === '' | this.state.linkUrl === ''){
             alert("Empty feilds")
         }else{
+            this.setState({id:Math.floor(Math.random() * 1000)})
             addToStore(this.state,this.state.length);
         }
     }
