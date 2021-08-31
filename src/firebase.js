@@ -16,13 +16,13 @@ let config = {
 initializeApp(config);
 
 
-sections.forEach((item) => {
-    addToStore(item)
+sections.forEach((item,index) => {
+    addToStore(item,index)
 })
 
-function addToStore(item) {
+export function addToStore(item,index) {
     const db = getDatabase();
-    set(ref(db, 'shop/' + item.id), item);
+    set(ref(db, 'shop/' + index), item);
 }
 
 export function getRef(){

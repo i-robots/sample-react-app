@@ -9,25 +9,25 @@ class Directory extends React.Component {
         super();
         
         this.state = {
-            sections: [],
+            sections: []
         };
     }
-    
-    componentDidMount() {
-        onValue(getRef(), (snapshot) => {
-            const data = snapshot.val();
-            console.log(data);
-            this.setState({ sections: data });
-        });
+
+    componentDidMount(){
+      onValue(getRef(), (snapshot) => {
+        const data = snapshot.val();
+        this.setState({ sections: data });
+      });
     }
 
     render() {
         return (
             <div className="App">
               <header className="App-header">
+              Data: {JSON.stringify(this.state.sections)}
                 <AnimatedList animation={"grow"}>
                   {this.state.sections.map((c) => (
-                    <ShopItem item={c} key={c.id}></ShopItem>
+                    <ShopItem  item={c} key={c.id}/>
                   ))}
                 </AnimatedList>
               </header>

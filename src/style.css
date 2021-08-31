@@ -21,3 +21,25 @@
   color: #09d3ac;
 }
   
+.add-form{
+  padding: 10px 10px;
+  background:#ffe;
+  text-align: center;
+}
+
+.form-control{
+  margin: 20px 0;
+}
+
+.form-control label{
+  display: block;
+  font-weight: bold;
+}
+
+.form-control input, textarea{
+  width: 25%;
+  height: 30px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
